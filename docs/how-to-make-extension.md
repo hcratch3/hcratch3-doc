@@ -140,6 +140,9 @@ When you would like to publish your extension module on another server, check th
 
 Xcratch loads all extensions which is used in the project automatically. 
 
+Example: 
+[https://xcratch.github.io/editor/#https://yokobond.github.io/xcratch-example/examples/xcratchExample.sb3](https://xcratch.github.io/editor/#https://yokobond.github.io/xcratch-example/examples/xcratchExample.sb3)
+
 If you make a project using at least one block of your extension and save as `examples/example.sb3`. The project can be opened with Xcratch by URL like following. 
 
 ```
