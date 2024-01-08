@@ -1,6 +1,6 @@
 # What is Xcratch
 
-Xcratch is a mod application of [Scratch3 by MIT](https://scratch.mit.edu/) to play with user-made extensions easily.
+[Xcratch](https://xcratch.github.io/) is a mod application of [Scratch3 by MIT](https://scratch.mit.edu/) to play with user-made extensions easily.
 
 ## Features
 
@@ -16,6 +16,18 @@ You don't need to run [Scratch Link](https://scratch.mit.edu/microbit) to play w
 
 The Xcratch editor is a PWA (Progressive Web Apps), which means that once you access it, you can use it without any further Internet communication. You can also install it on your local machine if necessary.
 
+### Open Project from URL
+
+Xcratch can directly open projects that are published on the Internet.
+There is two way to open project directly.
+
+open editor with `#`
+
+`https://xcratch.github.io/editor/#<project-URL>`
+
+or add a query parameter labeled `project`
+
+`https://xcratch.github.io/editor/?project=<project-URL>`
 
 ## Sample Extensions
 

@@ -15,6 +15,18 @@ Xcratch (エクスクラッチ)とは、[MITのスクラッチ3](https://scratch
 
 Xcratch エディターは PWA (Progressive Web Apps) になっているので、一度アクセスすればそれ以降はインターネット通信ができない状態で利用できます。必要に応じてローカルマシンにインストールすることもできます。
 
+### URLからプロジェクトを開く
+
+Xcratchは、インターネット上で公開されているプロジェクトを直接開くことができます。
+プロジェクトを直接開くには2つの方法があります。
+
+エディタで `#` を指定して開く
+
+https://xcratch.github.io/editor/#<プロジェクトURL>`。
+
+または、クエリパラメータに `project` というラベルを追加します。
+
+https://xcratch.github.io/editor/?project=<プロジェクトURL>`。
 
 ## 拡張機能の例
 
