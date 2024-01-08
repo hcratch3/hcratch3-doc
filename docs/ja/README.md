@@ -9,7 +9,7 @@ Xcratch (エクスクラッチ)とは、[MITのスクラッチ3](https://scratch
 
 ### Web Bluetooth API 対応
 
-'Web Bluetooth API' に対応したブラウザ (Chrome や Edge 、 iPad では [‎Scrub](https://apps.apple.com/jp/app/scrub-web-browser/id1569777095) など) で開くと、micro:bit や他の BLE 接続のデバイスを [Scratch Link](https://scratch.mit.edu/microbit) 無しで遊ぶことができます。
+'Web Bluetooth API' に対応したブラウザ (Chrome や Edge 、 iPad では [Scrub](https://apps.apple.com/jp/app/scrub-web-browser/id1569777095) など) で開くと、micro:bit や他の BLE 接続のデバイスを [Scratch Link](https://scratch.mit.edu/microbit) 無しで遊ぶことができます。
 
 ### オフラインで利用可能
 
