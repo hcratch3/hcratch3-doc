@@ -3,31 +3,31 @@
 ## Setting Up the Development Environment
 ### Setting Up the Xcratch Development Server
 
-To develop an extension, you need to clone [xcratch/scratch-vm#xcratch](https://github.com/xcratch/scratch-vm/tree/xcratch) and [xcratch/scratch-gui#xcratch](https://github.com/xcratch/scratch-gui/tree/xcratch) into the same directory as your extension code. The directory structure is expected to be as follows during development:
+To develop an extension, you need to clone [hcratch3/scratch-vm#develop](https://github.com/hcratch3/scratch-vm/tree/develop) and [hcratch3/scratch-gui#develop](https://github.com/hcratch3/scratch-gui/tree/develop) into the same directory as your extension code. The directory structure is expected to be as follows during development:
 
 ```
 .
 ├── scratch-vm
 ├── scratch-gui
-└── xcx-my-extension
+└── your-extensions
 ```
 
-Use the following commands to clone scratch-vm and scratch-gui, and install the necessary packages for development. The last command sets up the development environment for xcratch/scratch-gui itself.
+Use the following commands to clone scratch-vm and scratch-gui, and install the necessary packages for development. The last command sets up the development environment for hcratch3/scratch-gui itself.
 
 ```sh
-git clone -b xcratch https://github.com/xcratch/scratch-vm.git
+git clone -b xcratch https://github.com/hcratch3/scratch-vm.git
 cd ./scratch-vm
 npm install
 cd ../
-git clone -b xcratch https://github.com/xcratch/scratch-gui.git
+git clone -b xcratch https://github.com/hcratch3/scratch-gui.git
 cd ./scratch-gui
 npm install
 npm run setup-dev
 ```
 
-### Generating Scaffold Code
+<!-- ### Generating Scaffold Code
 
-To create a new extension for Xcratch, use [xcratch-create](https://www.npmjs.com/package/xcratch-create) to generate the scaffold code. xcratch-create is a Node executable script that downloads template code and replaces properties with arguments. The files created locally can be used as the base for the new extension.
+To create a new extension for Hcratch3, use [xcratch-create](https://www.npmjs.com/package/xcratch-create) to generate the scaffold code. xcratch-create is a Node executable script that downloads template code and replaces properties with arguments. The files created locally can be used as the base for the new extension.
 
 ```sh
 npx xcratch-create --repo=xcx-my-extension --account=githubAccount --extensionID=myExtension --extensionName='My Extension'
@@ -39,14 +39,14 @@ npx xcratch-create --repo=xcx-my-extension --account=githubAccount --extensionID
 - --account : Account on GitHub
 - --extensionID : ID of the extension in Xcratch
 - --extensionName : Name of the extension in Xcratch
-
+-->
 
 ### Setting Up the Local Repository
 
 This code is intended to be published on [GitHub](https://github.com/).
 
 ```sh
-cd xcx-my-extension
+cd your-extensions
 git init -b main
 ```
 
@@ -96,9 +96,9 @@ npm run watch
 
 To debug the built module, you need to retrieve the module via a web server.
 
-For example, set up [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in your local repository and load the module in the Xcratch editor as follows. (The port number and path of the URL will vary depending on the settings of Live Server)
+For example, set up [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in your local repository and load the module in the Hcratch3 editor as follows. (The port number and path of the URL will vary depending on the settings of Live Server)
 
-1. Open the Xcratch Editor.
+1. Open the Hcratch3 Editor.
 2. Click the "Add Extension" button.
 3. Select the "Load Extension" extension.
 4. Enter the URL of the module in the input field and press the "OK" button.
@@ -109,7 +109,7 @@ https://localhost:5500/dist/extensionID.mjs
 
 ### Debugging with the Xcratch Development Server
 
-When you set up the development environment for xcratch/scratch-gui, you can start the development server with `npm run start`. If you need an https server, start with the `--https` option. For this, you need to prepare a certificate locally with [mkcert](https://github.com/FiloSottile/mkcert) or similar.
+When you set up the development environment for hcratch3/scratch-gui, you can start the development server with `npm run start`. If you need an https server, start with the `--https` option. For this, you need to prepare a certificate locally with [mkcert](https://github.com/FiloSottile/mkcert) or similar.
 
 ```sh
 npm run start -- --https
@@ -129,21 +129,21 @@ To publish the module on GitHub Page, follow [GitHub Docs](https://docs.github.c
 
 If you set the "Source" of Pages to "`/(root)`" in the "`main`" branch, the extension module will be published at `https://<account>.github.io/<repository>/dist/<extensionID>.mjs`.
 
-If you want to publish the extension module on another server, check whether that server accepts [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) from `https://xcratch.github.io/`. If CORS is not enabled on the server, Xcratch cannot import the module.
+If you want to publish the extension module on another server, check whether that server accepts [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) from `https://hcratch3.github.io/`. If CORS is not enabled on the server, Hcratch3 cannot import the module.
 
 
 ### Showing Examples
 
-Xcratch can open a project from a URL and automatically load all extensions used in the project without entering the extension-URL.
+Hcratch3 can open a project from a URL and automatically load all extensions used in the project without entering the extension-URL.
 
-Create a sample project using at least one block of the newly created extension, save it as `projects/example.sb3`, and you can open this project in Xcratch with the following URL.
+Create a sample project using at least one block of the newly created extension, save it as `projects/example.sb3`, and you can open this project in Hcratch3 with the following URL.
 
 ```
-https://xcratch.github.io/editor/#https://<account>.github.io/<repository>/projects/example.sb3
+https://hcratch3.github.io/editor/#https://<account>.github.io/<repository>/projects/example.sb3
 ``` 
 
 You can also embed a moving project in a web page with the following HTML.
 
 ```html
-<iframe src="https://xcratch.github.io/editor/player#https://<account>.github.io/<repository>/projects/example.sb3" width="600px" height="500px"></iframe>
+<iframe src="https://hcratch3.github.io/editor/player#https://<account>.github.io/<repository>/projects/example.sb3" width="600px" height="500px"></iframe>
 ```
